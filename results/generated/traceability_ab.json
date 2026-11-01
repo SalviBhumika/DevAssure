@@ -1,0 +1,101 @@
+{
+  "experiment": "context_retrieval_traceability_proxy",
+  "retrieved_context_test_names": [
+    "test_service_response_latency_under_normal_load"
+  ],
+  "arms": {
+    "name_only": {
+      "requirements": [
+        {
+          "requirement_id": "REQ-001",
+          "requirement": "The service must validate input payloads and return a clear validation error.",
+          "tests": [
+            {
+              "test_name": "test_payload_validation_rejects_invalid_input",
+              "matched_terms": [
+                "input",
+                "validation"
+              ]
+            }
+          ],
+          "covered": true
+        },
+        {
+          "requirement_id": "REQ-002",
+          "requirement": "The API shall record an audit event for every accepted request.",
+          "tests": [
+            {
+              "test_name": "test_audit_event_written_for_request",
+              "matched_terms": [
+                "audit",
+                "event",
+                "request"
+              ]
+            }
+          ],
+          "covered": true
+        },
+        {
+          "requirement_id": "REQ-003",
+          "requirement": "The system should respond fast under normal load.",
+          "tests": [],
+          "covered": false
+        }
+      ],
+      "coverage": 0.6666666666666666,
+      "uncovered": [
+        "REQ-003"
+      ]
+    },
+    "retrieved_context": {
+      "requirements": [
+        {
+          "requirement_id": "REQ-001",
+          "requirement": "The service must validate input payloads and return a clear validation error.",
+          "tests": [
+            {
+              "test_name": "test_payload_validation_rejects_invalid_input",
+              "matched_terms": [
+                "input",
+                "validation"
+              ]
+            }
+          ],
+          "covered": true
+        },
+        {
+          "requirement_id": "REQ-002",
+          "requirement": "The API shall record an audit event for every accepted request.",
+          "tests": [
+            {
+              "test_name": "test_audit_event_written_for_request",
+              "matched_terms": [
+                "audit",
+                "event",
+                "request"
+              ]
+            }
+          ],
+          "covered": true
+        },
+        {
+          "requirement_id": "REQ-003",
+          "requirement": "The system should respond fast under normal load.",
+          "tests": [
+            {
+              "test_name": "test_service_response_latency_under_normal_load",
+              "matched_terms": [
+                "latency",
+                "load"
+              ]
+            }
+          ],
+          "covered": true
+        }
+      ],
+      "coverage": 1.0,
+      "uncovered": []
+    }
+  },
+  "warning": "Synthetic deterministic proxy only. It does not measure LLM-generated test correctness, seeded-defect detection or human review effort."
+}

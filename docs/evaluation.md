@@ -1,0 +1,3 @@
+# Evaluation protocol
+
+For context retrieval, report Recall@k and source attribution correctness on labelled requirements-to-file references. For traceability, report requirement coverage and false-link rate after a human-reviewed ground-truth matrix is created. For test generation, measure syntactic validity, test execution rate, requirement coverage, duplicate rate, seeded-defect detection, runtime and token cost. Split by project or requirement group to reduce leakage. The included script is a small deterministic context-retrieval and mapping proxy only; it does not produce valid conclusions about LLM-generated tests.
